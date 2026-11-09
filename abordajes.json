@@ -1,0 +1,260 @@
+{
+  "version": 1,
+  "modelo": {
+    "archivo": "ovejero.glb",
+    "largo": 1.0,
+    "rotacion": [
+      0,
+      0,
+      0
+    ],
+    "elevacion": 0,
+    "eje": "z"
+  },
+  "marcador": "marcador.mind",
+  "titulo3d": "LAPAROTOMIAS",
+  "anotacion": "Ovejero alemán\nTocá una incisión para ver el abordaje",
+  "fuente_libro": "Hernández y Negro, Fundamentos de la Cirugía Veterinaria (BM Press) [verificar título y edición]",
+  "quiz": {
+    "tolerancia": 0.07
+  },
+  "posturas": [
+    {
+      "nombre": "De pie",
+      "grados": 0
+    },
+    {
+      "nombre": "Decúbito dorsal",
+      "grados": 180
+    },
+    {
+      "nombre": "Decúbito lateral",
+      "grados": 90
+    }
+  ],
+  "grupos": [
+    {
+      "id": "media",
+      "nombre": "Línea media",
+      "color": "#e63946",
+      "tecnica": {
+        "planos": [
+          "Piel",
+          "Tejido subcutáneo",
+          "Línea alba + peritoneo"
+        ],
+        "sintesis": [
+          "Línea alba",
+          "Tejido subcutáneo",
+          "Plano subcuticular",
+          "Piel"
+        ],
+        "notas": [
+          "Ventaja: mayor exposición y acceso a los órganos abdominales; son las más utilizadas.",
+          "Límite: la síntesis es más laboriosa y hay mayor probabilidad de dehiscencia, con consecuencias graves."
+        ],
+        "paraPensar": "¿Y el peritoneo en la síntesis?"
+      }
+    },
+    {
+      "id": "flanco",
+      "nombre": "Flanco",
+      "color": "#1d7fe0",
+      "tecnica": {
+        "planos": [
+          "Piel",
+          "Tejido subcutáneo",
+          "Oblicuo abdominal externo",
+          "Oblicuo abdominal interno",
+          "Transverso abdominal (fascia transversa)",
+          "Peritoneo"
+        ],
+        "notas": [
+          "Ventaja: diéresis y síntesis rápidas por el campo reducido, y menor probabilidad de eventración.",
+          "Límite: campo quirúrgico pequeño, poca posibilidad de ampliarlo y mala visualización de estructuras profundas.",
+          "Entre los planos musculares transcurren ramas superficiales y profundas de la arteria ilíaca circunfleja: hacer hemostasia adecuada si hace falta.",
+          "Se trabaja plano por plano, igual que en las laparotomías medianas."
+        ]
+      }
+    }
+  ],
+  "referencias": [
+    {
+      "id": "xifoides",
+      "nombre": "Cartílago xifoides",
+      "grupo": "media"
+    },
+    {
+      "id": "ombligo",
+      "nombre": "Cicatriz umbilical",
+      "grupo": "media"
+    },
+    {
+      "id": "pubis",
+      "nombre": "Borde anterior del pubis",
+      "grupo": "media"
+    },
+    {
+      "id": "arcada",
+      "nombre": "Arcada costal",
+      "grupo": "flanco"
+    },
+    {
+      "id": "apofisis",
+      "nombre": "Apófisis transversas de las vértebras lumbares",
+      "grupo": "flanco"
+    },
+    {
+      "id": "tuberosidad",
+      "nombre": "Tuberosidad coxal",
+      "grupo": "flanco"
+    }
+  ],
+  "abordajes": [
+    {
+      "id": "xifoumbilical",
+      "grupo": "media",
+      "nombre": "Laparotomía xifoumbilical",
+      "ref": [
+        "xifoides",
+        "ombligo"
+      ],
+      "resumen": "Incisión sobre la línea media ventral (línea alba) desde el cartílago xifoides hasta la cicatriz umbilical.",
+      "acceso": "Estómago, diafragma e hígado.",
+      "pregunta": "Necesitás acceder a estómago, diafragma e hígado. ¿Dónde incidís?",
+      "fuente": "cap. 26, pp. 247-248 (Fig. 2); diapositivas de la Cátedra de Cirugía (2024)"
+    },
+    {
+      "id": "umbilicopubica",
+      "grupo": "media",
+      "nombre": "Laparotomía umbilicopúbica",
+      "ref": [
+        "ombligo",
+        "pubis"
+      ],
+      "resumen": "Incisión sobre la línea media ventral desde la cicatriz umbilical hasta el borde anterior del pubis.",
+      "acceso": "Intestino, vejiga, ovario y útero.",
+      "pregunta": "Necesitás acceder a intestino, vejiga, ovario o útero. ¿Dónde incidís?",
+      "fuente": "cap. 26, pp. 247-248 (Fig. 3); diapositivas de la Cátedra de Cirugía (2024)"
+    },
+    {
+      "id": "xifopubica",
+      "grupo": "media",
+      "nombre": "Laparotomía xifopúbica",
+      "ref": [
+        "xifoides",
+        "pubis"
+      ],
+      "resumen": "Incisión sobre la línea media ventral desde el xifoides hasta el pubis. Es un abordaje muy amplio.",
+      "acceso": "Laparotomías exploratorias.",
+      "pregunta": "Es una laparotomía exploratoria y necesitás la máxima exposición. ¿Dónde incidís?",
+      "fuente": "cap. 26, pp. 247-248 (Fig. 4); diapositivas de la Cátedra de Cirugía (2024)"
+    },
+    {
+      "id": "prerretroumbilical",
+      "grupo": "media",
+      "nombre": "Laparotomía prerretroumbilical",
+      "centrado": {
+        "en": "ombligo",
+        "eje": [
+          "xifoides",
+          "pubis"
+        ],
+        "mitad": 0.08
+      },
+      "resumen": "Incisión corta sobre la línea media, ubicada por delante y por detrás de la cicatriz umbilical.",
+      "acceso": "Abordaje utilizado para la ovariectomía.",
+      "pregunta": "Vas a hacer una ovariectomía por línea media con un abordaje corto. ¿Dónde incidís?",
+      "fuente": "cap. 26, pp. 247-248 (Fig. 5); diapositivas de la Cátedra de Cirugía (2024)"
+    },
+    {
+      "id": "flancotomia",
+      "grupo": "flanco",
+      "nombre": "Flancotomía",
+      "puntos": [
+        {
+          "id": "flanco_ini",
+          "nombre": "Inicio (1-2 dedos bajo las apófisis transversas)"
+        },
+        {
+          "id": "flanco_fin",
+          "nombre": "Fin de la incisión vertical"
+        }
+      ],
+      "resumen": "Incisión vertical en el punto medio entre la arcada costal y la tuberosidad coxal, comenzando uno o dos dedos por debajo de las apófisis transversas de las vértebras lumbares. Alternativa solo para ovariectomía: palpar el riñón y comenzar la incisión detrás de su polo caudal.",
+      "acceso": "Órganos dorsomediales del abdomen: glándulas adrenales, riñones y ovarios. También se usa para colocar sondas de alimentación (gastrostomía) y para descompresión gástrica.",
+      "variantes": [
+        {
+          "nombre": "Sección muscular",
+          "texto": "Los músculos oblicuo externo, oblicuo interno y transverso se seccionan en el mismo sentido que la piel (dorsoventral)."
+        },
+        {
+          "nombre": "Divulsión (laparotomía «estrellada»)",
+          "texto": "Los músculos se separan siguiendo la dirección de sus fibras, plano por plano. Esta variante se denomina laparotomía estrellada."
+        }
+      ],
+      "pregunta": "Vas a hacer una ovariectomía por el flanco. ¿Dónde incidís?",
+      "fuente": "cap. 26, pp. 254-255 (Fig. 7); diapositivas de la Cátedra de Cirugía (2024)"
+    },
+    {
+      "id": "paracostal",
+      "grupo": "flanco",
+      "nombre": "Laparotomía paracostal",
+      "puntos": [
+        {
+          "id": "paracostal_ini",
+          "nombre": "Inicio (1-2 dedos bajo las apófisis transversas)"
+        },
+        {
+          "id": "paracostal_fin",
+          "nombre": "Fin (paralela a la última costilla)"
+        }
+      ],
+      "resumen": "Incisión uno o dos dedos por detrás de la última costilla, paralela a su curvatura, comenzando uno o dos dedos por debajo de las apófisis transversas lumbares. Los planos a incidir son similares a los de la flancotomía.",
+      "acceso": "Gastrostomía: el flanco izquierdo es el sitio habitual para colocar sondas de alimentación.",
+      "pregunta": "Vas a colocar una sonda de alimentación mediante gastrostomía. ¿Dónde incidís?",
+      "fuente": "cap. 26, pp. 254-255 (Fig. 8); diapositivas de la Cátedra de Cirugía (2024)"
+    }
+  ],
+  "generales": [
+    {
+      "titulo": "Clasificación de las laparotomías",
+      "items": [
+        "Ventrales: medianas y paramedianas.",
+        "Laterales: flancotomía y laparotomía paracostal.",
+        "Combinadas: para acceder a órganos retroperitoneales, ampliar el campo quirúrgico, etc."
+      ]
+    },
+    {
+      "titulo": "Laparotomías paramedianas (no dibujadas en el modelo)",
+      "items": [
+        "Diéresis paralela a la línea media; ofrecen poca apertura. Se usan en algunas hernias inguinales.",
+        "Pararrectales: el músculo recto no se incide, se lo separa hacia medial o lateral.",
+        "Transrectales: se incide el músculo recto.",
+        "Planos: piel y subcutáneo, vaina externa del recto, músculo recto abdominal, vaina interna, peritoneo.",
+        "Síntesis: las vainas por separado; el músculo recto no se sutura."
+      ]
+    },
+    {
+      "titulo": "Complicaciones de las laparotomías ventrales",
+      "items": [
+        "Dehiscencia",
+        "Eventración / evisceración",
+        "Espacios muertos",
+        "Seromas",
+        "Infección del sitio de la herida quirúrgica"
+      ]
+    },
+    {
+      "titulo": "Qué se necesita para hacer correctamente una laparotomía",
+      "items": [
+        "Anatomía y patología",
+        "Técnica quirúrgica",
+        "Conocer las complicaciones que pueden surgir y estar preparado para resolverlas",
+        "Disponer del instrumental y equipo necesarios",
+        "Respetar los principios de Halsted",
+        "Respetar y hacer respetar la técnica quirúrgica aséptica"
+      ]
+    }
+  ]
+}
